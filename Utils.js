@@ -52,6 +52,7 @@ let paramValidator = (req, res, next) => {
             }
         }
     }
+    req.query_url = req.protocol + '://' + req.get('host') + req.originalUrl;
     next();
 }
 

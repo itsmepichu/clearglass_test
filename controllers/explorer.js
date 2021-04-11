@@ -99,7 +99,7 @@ const getData = async (req, res, next) => {
             result_data.push(tmpClientObj);
         });
 
-        res.send(result_data)
+        res.send({query:req.query_url, data: result_data})
     } catch (ex) {
         if(ex) {
             next(ex);
